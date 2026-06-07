@@ -1,0 +1,85 @@
+[
+  {
+    "id": "san-diego-hills-bong-pi",
+    "name": "San Diego Hills (Bong Pi / Universal Zone)",
+    "whatsapp": "628111111111",
+    "religion": "Universal",
+    "price": 122000000,
+    "booking": "Pre-Need & At-Need",
+    "plotTypes": ["Single", "Double", "Family"],
+    "coordinates": {
+      "lat": -6.3688,
+      "lng": 107.2789
+    },
+    "dimensions": "3.5m x 11.6m",
+    "facilities": [
+      "Chapel",
+      "Rest area",
+      "Parking area",
+      "Landscaped gardens",
+      "24-hour security"
+    ],
+    "address": "Jl. Raya Karawang-Bekasi KM 37, Karawang, Jawa Barat"
+  },
+  {
+    "id": "al-azhar-memorial-garden",
+    "name": "Al Azhar Memorial Garden (Single Plot)",
+    "whatsapp": "628222222222",
+    "religion": "Islam",
+    "price": 38000000,
+    "booking": "Pre-Need & At-Need",
+    "plotTypes": ["Single"],
+    "coordinates": {
+      "lat": -6.3465,
+      "lng": 107.2882
+    },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Musholla",
+      "Parking area",
+      "Landscaped gardens",
+      "Administrative office"
+    ],
+    "address": "Jl. Raya Karawang-Bekasi KM 35, Karawang, Jawa Barat"
+  },
+  {
+    "id": "tpu-pondok-ranggon",
+    "name": "TPU Pondok Ranggon (Blok Muslim)",
+    "whatsapp": "628333333333",
+    "religion": "Islam",
+    "price": 100000,
+    "booking": "At-Need Only",
+    "plotTypes": ["Single"],
+    "coordinates": {
+      "lat": -6.3629,
+      "lng": 106.9155
+    },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Musholla",
+      "Administrative office",
+      "Public parking"
+    ],
+    "address": "Jl. Pondok Ranggon, Cipayung, Jakarta Timur"
+  },
+  {
+    "id": "tpu-tanah-kusir",
+    "name": "TPU Tanah Kusir (Blok Kristen)",
+    "whatsapp": "628444444444",
+    "religion": "Christian",
+    "price": 100000,
+    "booking": "At-Need Only",
+    "plotTypes": ["Single"],
+    "coordinates": {
+      "lat": -6.2575,
+      "lng": 106.7725
+    },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Chapel",
+      "Administrative office",
+      "Public parking"
+    ],
+    "address": "Jl. Tanah Kusir, Kebayoran Lama, Jakarta Selatan"
+  }
+]
