@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useSearch } from "@/context/SearchContext";
 import { burialSites } from "@/lib/burial-sites";
 import { filterBySearch, groupByLetter } from "@/lib/filters";
+import { STICKY_LETTER_HEADER_TOP } from "@/lib/layout";
 import type { BurialSite } from "@/types/burial-site";
 import SiteCard from "./SiteCard";
 
@@ -38,7 +39,9 @@ const AlphabeticalView = ({ onSiteSelect }: AlphabeticalViewProps) => {
         <div className="flex flex-col gap-4">
           {letters.map((letter) => (
             <section key={letter}>
-              <div className="sticky top-[108px] z-20 -mx-4 border-b border-neutral-muted bg-white/95 px-4 py-1.5 backdrop-blur-sm">
+              <div
+                className={`sticky ${STICKY_LETTER_HEADER_TOP} z-20 -mx-4 border-b border-neutral-muted bg-white/95 px-4 py-1.5 backdrop-blur-sm`}
+              >
                 <span className="text-sm font-bold text-brand-emerald">
                   {letter}
                 </span>

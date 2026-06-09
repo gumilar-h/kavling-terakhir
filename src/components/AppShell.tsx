@@ -1,36 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { BurialSite } from "@/types/burial-site";
 import AlphabeticalView from "./AlphabeticalView";
-import BottomNav, { type AppView } from "./BottomNav";
+import { type AppView } from "./BottomNav";
 import FilterCompareView from "./FilterCompareView";
-import Header from "./Header";
+import MobileAppFrame from "./MobileAppFrame";
 import SiteDetailModal from "./SiteDetailModal";
 
 const AppShell = () => {
+  const searchParams = useSearchParams();
   const [activeView, setActiveView] = useState<AppView>("filter");
   const [selectedSite, setSelectedSite] = useState<BurialSite | null>(null);
 
+  useEffect(() => {
+    const tab = searchParams.get("tab");
+    if (tab === "directory") {
+      setActiveView("directory");
+    } else if (tab === "filter") {
+      setActiveView("filter");
+    }
+  }, [searchParams]);
+
   return (
-    <div className="flex min-h-dvh flex-col">
-      <Header />
-
-      <main className="flex-1 overflow-y-auto pb-2">
-        {activeView === "filter" ? (
-          <FilterCompareView onSiteSelect={setSelectedSite} />
-        ) : (
-          <AlphabeticalView onSiteSelect={setSelectedSite} />
-        )}
-      </main>
-
-      <BottomNav activeView={activeView} onViewChange={setActiveView} />
+    <MobileAppFrame activeView={activeView} onViewChange={setActiveView}>
+      {activeView === "filter" ? (
+        <FilterCompareView onSiteSelect={setSelectedSite} />
+      ) : (
+        <AlphabeticalView onSiteSelect={setSelectedSite} />
+      )}
 
       <SiteDetailModal
         site={selectedSite}
         onClose={() => setSelectedSite(null)}
       />
-    </div>
+    </MobileAppFrame>
   );
 };
 

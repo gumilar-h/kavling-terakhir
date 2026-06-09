@@ -2,22 +2,18 @@
 
 import { Search, X } from "lucide-react";
 import { useSearch } from "@/context/SearchContext";
+import CTABanner from "./CTABanner";
 
 const Header = () => {
   const { searchQuery, setSearchQuery, clearSearch } = useSearch();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-muted/60 bg-[#eff3ef]/95 backdrop-blur-sm">
-      <div className="px-4 pb-3 pt-4">
-        <h1 className="text-lg font-bold tracking-tight text-neutral-dark">
-          KavlingTerakhir
-        </h1>
-        <p className="text-xs font-medium text-neutral-dark/70">
-          Bandingkan pemakaman Jabodetabek
-        </p>
-      </div>
+    <header className="sticky top-0 z-50 bg-[#eff3ef] pb-2 shadow-sm">
+      {/* Top tier: persistent CTA banner */}
+      <CTABanner />
 
-      <div className="px-4 pb-3">
+      {/* Bottom tier: universal search bar */}
+      <div className="px-4 pt-2">
         <div className="relative flex items-center">
           <Search
             className="pointer-events-none absolute left-3 h-4 w-4 text-neutral-dark/50"
