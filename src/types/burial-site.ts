@@ -1,10 +1,10 @@
 /** Religion categories supported by burial sites */
 export type Religion =
   | "Islam"
-  | "Christian"
-  | "Catholic"
-  | "Buddhist"
-  | "Universal";
+  | "Protestan"
+  | "Katolik"
+  | "Buddha"
+  | "Konghucu";
 
 /** Booking intent availability */
 export type BookingType = "Pre-Need & At-Need" | "At-Need Only" | "Pre-Need Only";
@@ -42,6 +42,8 @@ export interface BurialSite {
   coordinates: Coordinates;
   dimensions: string;
   facilities: string[];
+  kecamatan: string;
+  city: string;
   address: string;
   thumbnailUrl?: string | null;
   images?: string[];

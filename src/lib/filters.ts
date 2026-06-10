@@ -8,6 +8,15 @@ import type {
 
 export { PRICE_FILTER_MAX, PRICE_FILTER_MIN } from "@/types/burial-site";
 
+const MULTI_FAITH_SITE_IDS = new Set(["san-diego-hills-bong-pi"]);
+
+const matchesReligionFilter = (
+  site: BurialSite,
+  religion: Religion,
+): boolean =>
+  site.religion === religion ||
+  MULTI_FAITH_SITE_IDS.has(site.id);
+
 const matchesPriceBounds = (
   price: number,
   min: number,
@@ -53,7 +62,9 @@ export const filterBurialSites = (
   searchQuery: string,
 ): BurialSite[] => {
   return sites.filter((site) => {
-    if (filters.religion && site.religion !== filters.religion) return false;
+    if (filters.religion && !matchesReligionFilter(site, filters.religion)) {
+      return false;
+    }
     if (
       !matchesPriceBounds(site.price, filters.priceMin, filters.priceMax)
     ) {
@@ -106,18 +117,24 @@ export const supportsPreNeed = (booking: BurialSite["booking"]): boolean =>
 
 export const RELIGION_OPTIONS: Religion[] = [
   "Islam",
-  "Christian",
-  "Catholic",
-  "Buddhist",
-  "Universal",
+  "Protestan",
+  "Katolik",
+  "Buddha",
+  "Konghucu",
 ];
 
 export const BUYING_INTENT_OPTIONS: {
   value: BuyingIntent;
   label: string;
 }[] = [
-  { value: "pre-need", label: "Pre-Need" },
-  { value: "at-need", label: "At-Need" },
+  { value: "at-need", label: "At-Need (saat ini)" },
+  { value: "pre-need", label: "Pre-Need (masa depan)" },
 ];
 
 export const PLOT_TYPE_OPTIONS: PlotType[] = ["Single", "Double", "Family"];
+
+export const PLOT_TYPE_LABELS: Record<PlotType, string> = {
+  Single: "Single",
+  Double: "Double",
+  Family: "Family (3+)",
+};

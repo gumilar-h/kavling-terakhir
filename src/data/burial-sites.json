@@ -3,7 +3,7 @@
     "id": "san-diego-hills-bong-pi",
     "name": "San Diego Hills (Bong Pi / Universal Zone)",
     "whatsapp": "628111111111",
-    "religion": "Universal",
+    "religion": "Islam",
     "price": 122000000,
     "booking": "Pre-Need & At-Need",
     "plotTypes": ["Single", "Double", "Family"],
@@ -51,6 +51,8 @@
       "Landscaped gardens",
       "24-hour security"
     ],
+    "kecamatan": "Karawang Timur",
+    "city": "Karawang",
     "address": "Jl. Raya Karawang-Bekasi KM 37, Karawang, Jawa Barat"
   },
   {
@@ -84,6 +86,8 @@
       "Landscaped gardens",
       "Administrative office"
     ],
+    "kecamatan": "Karawang Timur",
+    "city": "Karawang",
     "address": "Jl. Raya Karawang-Bekasi KM 35, Karawang, Jawa Barat"
   },
   {
@@ -116,13 +120,15 @@
       "Administrative office",
       "Public parking"
     ],
+    "kecamatan": "Cipayung",
+    "city": "Jakarta Timur",
     "address": "Jl. Pondok Ranggon, Cipayung, Jakarta Timur"
   },
   {
     "id": "tpu-tanah-kusir",
     "name": "TPU Tanah Kusir (Blok Kristen)",
     "whatsapp": "628444444444",
-    "religion": "Christian",
+    "religion": "Protestan",
     "price": 100000,
     "booking": "At-Need Only",
     "plotTypes": ["Single"],
@@ -148,6 +154,8 @@
       "Administrative office",
       "Public parking"
     ],
+    "kecamatan": "Kebayoran Lama",
+    "city": "Jakarta Selatan",
     "address": "Jl. Tanah Kusir, Kebayoran Lama, Jakarta Selatan"
   }
 ]

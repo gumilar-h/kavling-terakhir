@@ -6,6 +6,7 @@ import { burialSites } from "@/lib/burial-sites";
 import {
   BUYING_INTENT_OPTIONS,
   filterBurialSites,
+  PLOT_TYPE_LABELS,
   PLOT_TYPE_OPTIONS,
   RELIGION_OPTIONS,
 } from "@/lib/filters";
@@ -120,7 +121,7 @@ const FilterCompareView = ({ onSiteSelect }: FilterCompareViewProps) => {
       {/* Filter 3: Buying Intent */}
       <section>
         <h2 className="mb-2 text-xs font-bold uppercase tracking-wide text-neutral-dark/70">
-          Kondisi Pembelian
+          Kebutuhan
         </h2>
         <div className="flex flex-wrap gap-2">
           {BUYING_INTENT_OPTIONS.map(({ value, label }) => (
@@ -143,7 +144,7 @@ const FilterCompareView = ({ onSiteSelect }: FilterCompareViewProps) => {
           {PLOT_TYPE_OPTIONS.map((plotType) => (
             <FilterChip
               key={plotType}
-              label={plotType}
+              label={PLOT_TYPE_LABELS[plotType]}
               isActive={filters.plotType === plotType}
               onClick={() => toggleFilter("plotType", plotType)}
             />
