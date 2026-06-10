@@ -34,7 +34,7 @@ export interface BurialSite {
   id: string;
   name: string;
   whatsapp: string;
-  religion: Religion;
+  religions: Religion[];
   price: number;
   booking: BookingType;
   plotTypes: PlotType[];

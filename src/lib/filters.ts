@@ -8,14 +8,10 @@ import type {
 
 export { PRICE_FILTER_MAX, PRICE_FILTER_MIN } from "@/types/burial-site";
 
-const MULTI_FAITH_SITE_IDS = new Set(["san-diego-hills-bong-pi"]);
-
 const matchesReligionFilter = (
   site: BurialSite,
   religion: Religion,
-): boolean =>
-  site.religion === religion ||
-  MULTI_FAITH_SITE_IDS.has(site.id);
+): boolean => site.religions.includes(religion);
 
 const matchesPriceBounds = (
   price: number,
@@ -39,7 +35,7 @@ const matchesSearch = (site: BurialSite, query: string): boolean => {
 
   const haystack = [
     site.name,
-    site.religion,
+    site.religions.join(" "),
     site.address,
     site.dimensions,
     ...site.plotTypes,

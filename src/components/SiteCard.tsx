@@ -43,10 +43,7 @@ const SiteCard = ({
           <h3 className="text-sm font-semibold leading-snug text-neutral-dark">
             {site.name}
           </h3>
-          <span className="mt-1 inline-block rounded-full border border-neutral-muted bg-white px-2 py-0.5 text-[10px] font-semibold text-brand-emerald">
-            {site.religion}
-          </span>
-          <p className="mt-1.5 text-sm font-medium text-neutral-dark/80">
+          <p className="mt-0.5 text-sm font-medium text-neutral-dark/80">
             {site.kecamatan}, {site.city}
           </p>
           <div className="mt-1 flex items-center gap-1 text-xs font-medium text-neutral-dark/70">

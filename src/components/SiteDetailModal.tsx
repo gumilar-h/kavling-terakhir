@@ -81,10 +81,6 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
 
   if (!site) return null;
 
-  const startingPrice = Math.min(
-    ...site.plotOptions.map((option) => option.startingPrice),
-  );
-
   const whatsappUrl = buildWhatsAppLink({
     phoneNumber: site.whatsapp,
     burialSiteName: site.name,
@@ -125,17 +121,15 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
           >
             {site.name}
           </h2>
-          <p className="mt-1 text-lg font-bold text-brand-emerald">
-            {site.plotOptions.length > 1
-              ? `Mulai dari ${formatPrice(startingPrice)}`
-              : formatPrice(startingPrice)}
+          <p className="mt-1 text-sm font-medium text-neutral-dark/80">
+            {site.kecamatan}, {site.city}
           </p>
         </div>
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto px-4 py-4">
           <div className="flex flex-col gap-4">
-            <DetailRow label="Agama" value={site.religion} />
+            <DetailRow label="Agama" value={site.religions.join(", ")} />
             <DetailRow label="Ukuran Plot" value={site.dimensions} />
 
             <div>

@@ -22,7 +22,7 @@ const ROWS: { key: string; label: string; render: (site: BurialSite) => string }
   {
     key: "religion",
     label: "Agama",
-    render: (site) => site.religion,
+    render: (site) => site.religions.join(", "),
   },
   {
     key: "pre-need",
