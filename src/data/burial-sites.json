@@ -1,9 +1,41 @@
 [
   {
-    "id": "san-diego-hills-bong-pi",
-    "name": "San Diego Hills (Bong Pi / Universal Zone)",
+    "id": "al-azhar-memorial-garden",
+    "name": "Al Azhar Memorial Garden (Tipe Single Standard)",
+    "whatsapp": "628222222222",
+    "religions": ["Islam"],
+    "price": 53932500,
+    "booking": "Pre-Need & At-Need",
+    "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 53932500,
+        "atNeedPrice": 53932500,
+        "features": [
+          "1.5m x 3.0m",
+          "Makam tunggal khusus Muslim",
+          "Bebas biaya perawatan rumput selamanya"
+        ]
+      }
+    ],
+    "coordinates": { "lat": -6.3465, "lng": 107.2882 },
+    "dimensions": "1.5m x 3.0m",
+    "facilities": [
+      "Masjid Agung",
+      "Lounge keluarga VIP",
+      "Sistem pembuangan air terintegrasi"
+    ],
+    "kecamatan": "Telukjambe Barat",
+    "city": "Karawang",
+    "address": "Jl. Raya Karawang-Bekasi KM 35, Telukjambe Barat, Karawang"
+  },
+  {
+    "id": "san-diego-hills-universal",
+    "name": "San Diego Hills Memorial Park (Universal Zone)",
     "whatsapp": "628111111111",
-    "religions": ["Islam", "Protestan", "Katolik", "Buddha", "Konghucu"],
+    "religions": ["Katolik", "Protestan", "Buddha", "Universal"],
     "price": 122000000,
     "booking": "Pre-Need & At-Need",
     "plotTypes": ["Single", "Double", "Family"],
@@ -12,89 +44,47 @@
         "plotType": "Single",
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 122000000,
-        "atNeedPrice": 145000000,
+        "atNeedPrice": 135000000,
         "features": [
-          "3.5m x 11.6m",
-          "Premium landscaped location",
-          "Chapel access included"
+          "1.1m x 2.6m",
+          "Tanpa pembatas/tembok",
+          "Perpetual care fund aman"
         ]
       },
       {
         "plotType": "Double",
         "booking": "Pre-Need & At-Need",
-        "preNeedPrice": 185000000,
-        "atNeedPrice": 220000000,
+        "preNeedPrice": 250000000,
+        "atNeedPrice": 280000000,
         "features": [
-          "Side-by-side plots",
-          "Shared memorial space",
-          "Priority garden placement"
+          "Semi-private area dengan pembatas tanaman",
+          "Kapasitas untuk 2 jenazah"
         ]
       },
       {
         "plotType": "Family",
-        "booking": "Pre-Need Only",
-        "preNeedPrice": 280000000,
-        "features": [
-          "Up to 4 adjacent plots",
-          "Private garden area",
-          "Dedicated family pavilion"
-        ]
-      }
-    ],
-    "coordinates": {
-      "lat": -6.3688,
-      "lng": 107.2789
-    },
-    "dimensions": "3.5m x 11.6m",
-    "facilities": [
-      "Chapel",
-      "Rest area",
-      "Parking area",
-      "Landscaped gardens",
-      "24-hour security"
-    ],
-    "kecamatan": "Karawang Timur",
-    "city": "Karawang",
-    "address": "Jl. Raya Karawang-Bekasi KM 37, Karawang, Jawa Barat"
-  },
-  {
-    "id": "al-azhar-memorial-garden",
-    "name": "Al Azhar Memorial Garden (Single Plot)",
-    "whatsapp": "628222222222",
-    "religions": ["Islam"],
-    "price": 38000000,
-    "booking": "Pre-Need & At-Need",
-    "plotTypes": ["Single"],
-    "plotOptions": [
-      {
-        "plotType": "Single",
         "booking": "Pre-Need & At-Need",
-        "preNeedPrice": 38000000,
-        "atNeedPrice": 45000000,
+        "preNeedPrice": 650000000,
+        "atNeedPrice": 720000000,
         "features": [
-          "1.5m x 2.5m",
-          "Islamic section",
-          "Installment plans available"
+          "Private estate dengan pagar tembok/pintu gerbang",
+          "Bisa menampung 4-8 jenazah atau lebih"
         ]
       }
     ],
-    "coordinates": {
-      "lat": -6.3465,
-      "lng": 107.2882
-    },
-    "dimensions": "1.5m x 2.5m",
+    "coordinates": { "lat": -6.3688, "lng": 107.2789 },
+    "dimensions": "Varies by type",
     "facilities": [
-      "Musholla",
-      "Parking area",
-      "Landscaped gardens",
-      "Administrative office"
+      "Family Chapel",
+      "Restoran & Minimarket",
+      "Danau buatan & Lanskap asri"
     ],
-    "kecamatan": "Karawang Timur",
+    "kecamatan": "Telukjambe Barat",
     "city": "Karawang",
-    "address": "Jl. Raya Karawang-Bekasi KM 35, Karawang, Jawa Barat"
+    "address": "Exit Tol Karawang Barat KM 46, Karawang"
   },
   {
-    "id": "tpu-pondok-ranggon",
+    "id": "tpu-pondok-ranggon-muslim",
     "name": "TPU Pondok Ranggon (Blok Muslim)",
     "whatsapp": "628333333333",
     "religions": ["Islam"],
@@ -108,20 +98,17 @@
         "atNeedPrice": 100000,
         "features": [
           "1.5m x 2.5m",
-          "Government-regulated pricing",
-          "Same-day processing available"
+          "Muslim section",
+          "Wajib melampirkan Surat Keterangan Kematian (Surat Ijo)"
         ]
       }
     ],
-    "coordinates": {
-      "lat": -6.3629,
-      "lng": 106.9155
-    },
+    "coordinates": { "lat": -6.3629, "lng": 106.9155 },
     "dimensions": "1.5m x 2.5m",
     "facilities": [
-      "Musholla",
-      "Administrative office",
-      "Public parking"
+      "Musholla publik",
+      "Kantor administrasi TPU",
+      "Lahan parkir kendaraan umum"
     ],
     "kecamatan": "Cipayung",
     "city": "Jakarta Timur",
@@ -131,7 +118,7 @@
     "id": "tpu-tanah-kusir",
     "name": "TPU Tanah Kusir (Blok Kristen)",
     "whatsapp": "628444444444",
-    "religions": ["Protestan"],
+    "religions": ["Protestan", "Katolik"],
     "price": 100000,
     "booking": "At-Need Only",
     "plotTypes": ["Single"],
@@ -147,10 +134,7 @@
         ]
       }
     ],
-    "coordinates": {
-      "lat": -6.2575,
-      "lng": 106.7725
-    },
+    "coordinates": { "lat": -6.2575, "lng": 106.7725 },
     "dimensions": "1.5m x 2.5m",
     "facilities": [
       "Chapel",
@@ -160,5 +144,151 @@
     "kecamatan": "Kebayoran Lama",
     "city": "Jakarta Selatan",
     "address": "Jl. Tanah Kusir, Kebayoran Lama, Jakarta Selatan"
+  },
+  {
+    "id": "graha-sentosa-memorial",
+    "name": "Graha Sentosa Memorial Park",
+    "whatsapp": "6282155995599",
+    "religions": ["Katolik", "Protestan", "Buddha", "Universal"],
+    "price": 40000000,
+    "booking": "Pre-Need & At-Need",
+    "plotTypes": ["Single", "Double"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 40000000,
+        "atNeedPrice": 45000000,
+        "features": [
+          "1.5m x 3.0m",
+          "Desain makam modern minimalis",
+          "Perawatan rumput terjamin pengelola"
+        ]
+      },
+      {
+        "plotType": "Double",
+        "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 85000000,
+        "atNeedPrice": 95000000,
+        "features": [
+          "Lahan berdampingan untuk pasangan",
+          "Pilihan ornamen nisan khusus sesuai keyakinan"
+        ]
+      }
+    ],
+    "coordinates": { "lat": -6.3611, "lng": 107.2654 },
+    "dimensions": "1.5m x 3.0m",
+    "facilities": [
+      "Gedung Paviliun upacara",
+      "Konsultasi tata letak nisan (Feng Shui)",
+      "Keamanan kluster 24 jam"
+    ],
+    "kecamatan": "Telukjambe Timur",
+    "city": "Karawang",
+    "address": "Jl. Trans Heksa, Wanajaya, Telukjambe Timur, Karawang"
+  },
+  {
+    "id": "tpu-karet-bivak",
+    "name": "TPU Karet Bivak (Blok Kristen/Katolik)",
+    "whatsapp": "628555555555",
+    "religions": ["Katolik", "Protestan"],
+    "price": 100000,
+    "booking": "At-Need Only",
+    "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "booking": "At-Need Only",
+        "atNeedPrice": 100000,
+        "features": [
+          "1.5m x 2.5m",
+          "Lokasi pusat kota Jakarta",
+          "Sistem perpanjangan retribusi per 3 tahun"
+        ]
+      }
+    ],
+    "coordinates": { "lat": -6.2027, "lng": 106.8141 },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Akses jalan utama aspal",
+      "Kios penjual bunga segar resmi",
+      "Toilet umum & Keranda jenazah"
+    ],
+    "kecamatan": "Tanah Abang",
+    "city": "Jakarta Pusat",
+    "address": "Jl. KH. Mas Mansyur, Karet Tengsin, Tanah Abang, Jakarta Pusat"
+  },
+  {
+    "id": "tpu-menteng-pulo-buddha",
+    "name": "TPU Menteng Pulo (Blok Buddha)",
+    "whatsapp": "628666666666",
+    "religions": ["Buddha"],
+    "price": 100000,
+    "booking": "At-Need Only",
+    "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "booking": "At-Need Only",
+        "atNeedPrice": 100000,
+        "features": [
+          "1.5m x 2.5m",
+          "Area khusus penganut agama Buddha",
+          "Tarif retribusi resmi Pemprov DKI Jakarta"
+        ]
+      }
+    ],
+    "coordinates": { "lat": -6.2222, "lng": 106.8394 },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Akses mudah via jalur Casablanca",
+      "Pos Pelayanan TPU terpadu",
+      "Area teduh dengan pohon rindang"
+    ],
+    "kecamatan": "Tebet",
+    "city": "Jakarta Selatan",
+    "address": "Jl. Casablanca, Menteng Dalam, Tebet, Jakarta Selatan"
+  },
+  {
+    "id": "raudlatul-jannah-memorial",
+    "name": "Raudlatul Jannah Memorial Park",
+    "whatsapp": "628777777777",
+    "religions": ["Islam"],
+    "price": 39100000,
+    "booking": "Pre-Need & At-Need",
+    "plotTypes": ["Single", "Double"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 39100000,
+        "atNeedPrice": 43500000,
+        "features": [
+          "1.5m x 2.5m",
+          "Khusus Muslim sesuai kaidah fikih",
+          "Bebas biaya pemakaman selamanya"
+        ]
+      },
+      {
+        "plotType": "Double",
+        "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 82000000,
+        "atNeedPrice": 91000000,
+        "features": [
+          "Lahan semi-private bersebelahan",
+          "Nisan rata tanah (flat marker)"
+        ]
+      }
+    ],
+    "coordinates": { "lat": -6.3550, "lng": 107.2512 },
+    "dimensions": "1.5m x 2.5m",
+    "facilities": [
+      "Masjid mewah berasitektur Timur Tengah",
+      "Gazebo peristirahatan keluarga",
+      "Manajemen perawatan makam berkelanjutan"
+    ],
+    "kecamatan": "Telukjambe Barat",
+    "city": "Karawang",
+    "address": "Jl. Kuta Tandingan, Margakaya, Telukjambe Barat, Karawang"
   }
 ]
