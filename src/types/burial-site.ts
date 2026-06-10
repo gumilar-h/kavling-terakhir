@@ -24,9 +24,11 @@ export interface Coordinates {
 /** A specific plot offering at a burial site */
 export interface PlotOption {
   plotType: PlotType;
-  startingPrice: number;
   booking: BookingType;
+  preNeedPrice?: number;
+  atNeedPrice?: number;
   features: string[];
+  imageUrl?: string | null;
 }
 
 /** Core burial site record */

@@ -1,16 +1,21 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   ExternalLink,
-  MapPin,
   MessageCircle,
   X,
 } from "lucide-react";
 import { formatPrice } from "@/lib/format";
 import { supportsPreNeed } from "@/lib/filters";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import type { BookingType, BurialSite, PlotOption } from "@/types/burial-site";
+import type {
+  BookingType,
+  BurialSite,
+  BuyingIntent,
+  PlotOption,
+} from "@/types/burial-site";
+import ImageSlot from "./ImageSlot";
 import MediaGallery from "./MediaGallery";
 
 interface SiteDetailModalProps {
@@ -21,46 +26,99 @@ interface SiteDetailModalProps {
 const supportsAtNeed = (booking: BookingType): boolean =>
   booking === "Pre-Need & At-Need" || booking === "At-Need Only";
 
-const BookingBadges = ({ booking }: { booking: BookingType }) => (
-  <div className="flex flex-wrap gap-1.5">
-    {supportsPreNeed(booking) && (
-      <span className="rounded-full border border-brand-emerald/30 bg-brand-emerald/10 px-2 py-0.5 text-[10px] font-semibold text-brand-emerald">
-        Pre-Need
-      </span>
-    )}
-    {supportsAtNeed(booking) && (
-      <span className="rounded-full border border-neutral-muted bg-neutral-muted/40 px-2 py-0.5 text-[10px] font-semibold text-neutral-dark/80">
-        At-Need
-      </span>
-    )}
-  </div>
+const getDefaultBuyingIntent = (booking: BookingType): BuyingIntent =>
+  booking === "At-Need Only" ? "at-need" : "pre-need";
+
+const getPlotPrice = (
+  option: PlotOption,
+  intent: BuyingIntent,
+): number | undefined =>
+  intent === "pre-need" ? option.preNeedPrice : option.atNeedPrice;
+
+const OptionChip = ({
+  label,
+  isActive,
+  onClick,
+}: {
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ${
+      isActive
+        ? "border-brand-emerald bg-brand-emerald text-white shadow-sm"
+        : "border-neutral-muted bg-white text-brand-emerald hover:border-brand-emerald/30"
+    }`}
+  >
+    {label}
+  </button>
 );
 
-const PlotOptionCard = ({ option }: { option: PlotOption }) => (
-  <div className="rounded-xl border border-neutral-muted bg-white p-3 shadow-sm">
-    <div className="flex items-start justify-between gap-3">
-      <h3 className="text-sm font-bold text-neutral-dark">{option.plotType}</h3>
-      <p className="shrink-0 text-sm font-bold text-brand-emerald">
-        {formatPrice(option.startingPrice)}
-      </p>
-    </div>
+const PlotOptionCard = ({ option }: { option: PlotOption }) => {
+  const [buyingIntent, setBuyingIntent] = useState<BuyingIntent>(() =>
+    getDefaultBuyingIntent(option.booking),
+  );
 
-    <div className="mt-2">
-      <BookingBadges booking={option.booking} />
-    </div>
+  const showPreNeed = supportsPreNeed(option.booking);
+  const showAtNeed = supportsAtNeed(option.booking);
+  const activePrice = getPlotPrice(option, buyingIntent);
 
-    <ul className="mt-2.5 flex flex-col gap-1">
-      {option.features.map((feature) => (
-        <li
-          key={feature}
-          className="text-xs font-medium text-neutral-dark/80 before:mr-2 before:font-bold before:text-brand-emerald before:content-['•']"
-        >
-          {feature}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+  return (
+    <div className="rounded-xl border border-neutral-muted bg-white p-3 shadow-sm">
+      <div className="flex gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-sm font-bold text-neutral-dark">
+              {option.plotType}
+            </h3>
+            {activePrice !== undefined && (
+              <p className="shrink-0 text-sm font-bold text-brand-emerald">
+                {formatPrice(activePrice)}
+              </p>
+            )}
+          </div>
+
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {showPreNeed && (
+              <OptionChip
+                label="Pre-Need"
+                isActive={buyingIntent === "pre-need"}
+                onClick={() => setBuyingIntent("pre-need")}
+              />
+            )}
+            {showAtNeed && (
+              <OptionChip
+                label="At-Need"
+                isActive={buyingIntent === "at-need"}
+                onClick={() => setBuyingIntent("at-need")}
+              />
+            )}
+          </div>
+
+          <ul className="mt-2.5 flex flex-col gap-1">
+            {option.features.map((feature) => (
+              <li
+                key={feature}
+                className="text-xs font-medium text-neutral-dark/80 before:mr-2 before:font-bold before:text-brand-emerald before:content-['•']"
+              >
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <ImageSlot
+          src={option.imageUrl}
+          alt={`${option.plotType} plot`}
+          className="h-24 w-24"
+        />
+      </div>
+    </div>
+  );
+};
 
 const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
   useEffect(() => {
@@ -146,11 +204,6 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="flex items-start gap-2 text-sm font-medium text-neutral-dark">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neutral-dark/60" />
-              <span>{site.address}</span>
             </div>
 
             <div>

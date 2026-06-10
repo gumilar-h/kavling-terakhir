@@ -10,8 +10,9 @@
     "plotOptions": [
       {
         "plotType": "Single",
-        "startingPrice": 122000000,
         "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 122000000,
+        "atNeedPrice": 145000000,
         "features": [
           "3.5m x 11.6m",
           "Premium landscaped location",
@@ -20,8 +21,9 @@
       },
       {
         "plotType": "Double",
-        "startingPrice": 185000000,
         "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 185000000,
+        "atNeedPrice": 220000000,
         "features": [
           "Side-by-side plots",
           "Shared memorial space",
@@ -30,8 +32,8 @@
       },
       {
         "plotType": "Family",
-        "startingPrice": 280000000,
         "booking": "Pre-Need Only",
+        "preNeedPrice": 280000000,
         "features": [
           "Up to 4 adjacent plots",
           "Private garden area",
@@ -66,8 +68,9 @@
     "plotOptions": [
       {
         "plotType": "Single",
-        "startingPrice": 38000000,
         "booking": "Pre-Need & At-Need",
+        "preNeedPrice": 38000000,
+        "atNeedPrice": 45000000,
         "features": [
           "1.5m x 2.5m",
           "Islamic section",
@@ -101,8 +104,8 @@
     "plotOptions": [
       {
         "plotType": "Single",
-        "startingPrice": 100000,
         "booking": "At-Need Only",
+        "atNeedPrice": 100000,
         "features": [
           "1.5m x 2.5m",
           "Government-regulated pricing",
@@ -135,8 +138,8 @@
     "plotOptions": [
       {
         "plotType": "Single",
-        "startingPrice": 100000,
         "booking": "At-Need Only",
+        "atNeedPrice": 100000,
         "features": [
           "1.5m x 2.5m",
           "Christian section",
