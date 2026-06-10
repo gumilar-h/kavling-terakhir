@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   ExternalLink,
   MapPin,
@@ -8,8 +8,9 @@ import {
   X,
 } from "lucide-react";
 import { formatPrice } from "@/lib/format";
+import { supportsPreNeed } from "@/lib/filters";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import type { BurialSite, BuyingIntent, PlotType } from "@/types/burial-site";
+import type { BookingType, BurialSite, PlotOption } from "@/types/burial-site";
 import MediaGallery from "./MediaGallery";
 
 interface SiteDetailModalProps {
@@ -17,41 +18,51 @@ interface SiteDetailModalProps {
   onClose: () => void;
 }
 
-const OptionChip = ({
-  label,
-  isActive,
-  onClick,
-}: {
-  label: string;
-  isActive: boolean;
-  onClick: () => void;
-}) => (
-  <button
-    type="button"
-    onClick={onClick}
-    className={`rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ${
-      isActive
-        ? "border-brand-emerald bg-brand-emerald text-white shadow-sm"
-        : "border-neutral-muted bg-white text-brand-emerald hover:border-brand-emerald/30"
-    }`}
-  >
-    {label}
-  </button>
+const supportsAtNeed = (booking: BookingType): boolean =>
+  booking === "Pre-Need & At-Need" || booking === "At-Need Only";
+
+const BookingBadges = ({ booking }: { booking: BookingType }) => (
+  <div className="flex flex-wrap gap-1.5">
+    {supportsPreNeed(booking) && (
+      <span className="rounded-full border border-brand-emerald/30 bg-brand-emerald/10 px-2 py-0.5 text-[10px] font-semibold text-brand-emerald">
+        Pre-Need
+      </span>
+    )}
+    {supportsAtNeed(booking) && (
+      <span className="rounded-full border border-neutral-muted bg-neutral-muted/40 px-2 py-0.5 text-[10px] font-semibold text-neutral-dark/80">
+        At-Need
+      </span>
+    )}
+  </div>
+);
+
+const PlotOptionCard = ({ option }: { option: PlotOption }) => (
+  <div className="rounded-xl border border-neutral-muted bg-white p-3 shadow-sm">
+    <div className="flex items-start justify-between gap-3">
+      <h3 className="text-sm font-bold text-neutral-dark">{option.plotType}</h3>
+      <p className="shrink-0 text-sm font-bold text-brand-emerald">
+        {formatPrice(option.startingPrice)}
+      </p>
+    </div>
+
+    <div className="mt-2">
+      <BookingBadges booking={option.booking} />
+    </div>
+
+    <ul className="mt-2.5 flex flex-col gap-1">
+      {option.features.map((feature) => (
+        <li
+          key={feature}
+          className="text-xs font-medium text-neutral-dark/80 before:mr-2 before:font-bold before:text-brand-emerald before:content-['•']"
+        >
+          {feature}
+        </li>
+      ))}
+    </ul>
+  </div>
 );
 
 const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
-  const [plotType, setPlotType] = useState<PlotType>("Single");
-  const [buyingIntent, setBuyingIntent] = useState<BuyingIntent>("pre-need");
-
-  useEffect(() => {
-    if (site) {
-      setPlotType(site.plotTypes[0]);
-      setBuyingIntent(
-        site.booking === "At-Need Only" ? "at-need" : "pre-need",
-      );
-    }
-  }, [site]);
-
   useEffect(() => {
     if (!site) return;
 
@@ -70,11 +81,13 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
 
   if (!site) return null;
 
+  const startingPrice = Math.min(
+    ...site.plotOptions.map((option) => option.startingPrice),
+  );
+
   const whatsappUrl = buildWhatsAppLink({
     phoneNumber: site.whatsapp,
     burialSiteName: site.name,
-    plotType,
-    buyingIntent,
   });
 
   return (
@@ -113,7 +126,9 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
             {site.name}
           </h2>
           <p className="mt-1 text-lg font-bold text-brand-emerald">
-            {formatPrice(site.price)}
+            {site.plotOptions.length > 1
+              ? `Mulai dari ${formatPrice(startingPrice)}`
+              : formatPrice(startingPrice)}
           </p>
         </div>
 
@@ -122,8 +137,6 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
           <div className="flex flex-col gap-4">
             <DetailRow label="Agama" value={site.religion} />
             <DetailRow label="Ukuran Plot" value={site.dimensions} />
-            <DetailRow label="Tipe Kavling" value={site.plotTypes.join(", ")} />
-            <DetailRow label="Ketersediaan" value={site.booking} />
 
             <div>
               <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-neutral-dark/70">
@@ -146,42 +159,14 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
               <span>{site.address}</span>
             </div>
 
-            {/* WhatsApp options */}
-            <div className="rounded-xl border border-neutral-muted bg-white p-3 shadow-sm">
-              <p className="mb-2 text-xs font-bold text-neutral-dark">
-                Opsi pesan WhatsApp
+            <div>
+              <p className="mb-2 text-xs font-bold uppercase tracking-wide text-neutral-dark/70">
+                Pilihan Kavling
               </p>
-              <div className="mb-2">
-                <label className="mb-1 block text-xs font-semibold text-neutral-dark/70">
-                  Tipe Kavling
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {site.plotTypes.map((type) => (
-                    <OptionChip
-                      key={type}
-                      label={type}
-                      isActive={plotType === type}
-                      onClick={() => setPlotType(type)}
-                    />
-                  ))}
-                </div>
-              </div>
-              <div>
-                <label className="mb-1 block text-xs font-semibold text-neutral-dark/70">
-                  Kondisi
-                </label>
-                <div className="flex gap-1.5">
-                  <OptionChip
-                    label="Pre-Need"
-                    isActive={buyingIntent === "pre-need"}
-                    onClick={() => setBuyingIntent("pre-need")}
-                  />
-                  <OptionChip
-                    label="At-Need"
-                    isActive={buyingIntent === "at-need"}
-                    onClick={() => setBuyingIntent("at-need")}
-                  />
-                </div>
+              <div className="flex flex-col gap-2">
+                {site.plotOptions.map((option) => (
+                  <PlotOptionCard key={option.plotType} option={option} />
+                ))}
               </div>
             </div>
           </div>

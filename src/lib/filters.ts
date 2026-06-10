@@ -35,6 +35,10 @@ const matchesSearch = (site: BurialSite, query: string): boolean => {
     site.dimensions,
     ...site.plotTypes,
     ...site.facilities,
+    ...site.plotOptions.flatMap((option) => [
+      option.plotType,
+      ...option.features,
+    ]),
   ]
     .join(" ")
     .toLowerCase();

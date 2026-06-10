@@ -21,6 +21,14 @@ export interface Coordinates {
   lng: number;
 }
 
+/** A specific plot offering at a burial site */
+export interface PlotOption {
+  plotType: PlotType;
+  startingPrice: number;
+  booking: BookingType;
+  features: string[];
+}
+
 /** Core burial site record */
 export interface BurialSite {
   id: string;
@@ -30,6 +38,7 @@ export interface BurialSite {
   price: number;
   booking: BookingType;
   plotTypes: PlotType[];
+  plotOptions: PlotOption[];
   coordinates: Coordinates;
   dimensions: string;
   facilities: string[];

@@ -7,6 +7,38 @@
     "price": 122000000,
     "booking": "Pre-Need & At-Need",
     "plotTypes": ["Single", "Double", "Family"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "startingPrice": 122000000,
+        "booking": "Pre-Need & At-Need",
+        "features": [
+          "3.5m x 11.6m",
+          "Premium landscaped location",
+          "Chapel access included"
+        ]
+      },
+      {
+        "plotType": "Double",
+        "startingPrice": 185000000,
+        "booking": "Pre-Need & At-Need",
+        "features": [
+          "Side-by-side plots",
+          "Shared memorial space",
+          "Priority garden placement"
+        ]
+      },
+      {
+        "plotType": "Family",
+        "startingPrice": 280000000,
+        "booking": "Pre-Need Only",
+        "features": [
+          "Up to 4 adjacent plots",
+          "Private garden area",
+          "Dedicated family pavilion"
+        ]
+      }
+    ],
     "coordinates": {
       "lat": -6.3688,
       "lng": 107.2789
@@ -29,6 +61,18 @@
     "price": 38000000,
     "booking": "Pre-Need & At-Need",
     "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "startingPrice": 38000000,
+        "booking": "Pre-Need & At-Need",
+        "features": [
+          "1.5m x 2.5m",
+          "Islamic section",
+          "Installment plans available"
+        ]
+      }
+    ],
     "coordinates": {
       "lat": -6.3465,
       "lng": 107.2882
@@ -50,6 +94,18 @@
     "price": 100000,
     "booking": "At-Need Only",
     "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "startingPrice": 100000,
+        "booking": "At-Need Only",
+        "features": [
+          "1.5m x 2.5m",
+          "Government-regulated pricing",
+          "Same-day processing available"
+        ]
+      }
+    ],
     "coordinates": {
       "lat": -6.3629,
       "lng": 106.9155
@@ -70,6 +126,18 @@
     "price": 100000,
     "booking": "At-Need Only",
     "plotTypes": ["Single"],
+    "plotOptions": [
+      {
+        "plotType": "Single",
+        "startingPrice": 100000,
+        "booking": "At-Need Only",
+        "features": [
+          "1.5m x 2.5m",
+          "Christian section",
+          "Government-regulated pricing"
+        ]
+      }
+    ],
     "coordinates": {
       "lat": -6.2575,
       "lng": 106.7725
