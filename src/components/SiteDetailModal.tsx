@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { formatPrice } from "@/lib/format";
 import { supportsPreNeed } from "@/lib/filters";
+import { buildGoogleMapsLink } from "@/lib/maps";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import type {
   BookingType,
@@ -144,6 +145,8 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
     burialSiteName: site.name,
   });
 
+  const googleMapsUrl = buildGoogleMapsLink(site.coordinates, site.name);
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-end justify-center bg-neutral-dark/50 sm:items-center"
@@ -222,7 +225,7 @@ const SiteDetailModal = ({ site, onClose }: SiteDetailModalProps) => {
         {/* Actions */}
         <div className="flex flex-col gap-2 border-t border-neutral-muted/60 px-4 py-4">
           <a
-            href="https://google.com"
+            href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 rounded-xl border border-neutral-muted bg-white py-3 text-sm font-semibold text-neutral-dark transition-colors hover:border-brand-emerald/30"

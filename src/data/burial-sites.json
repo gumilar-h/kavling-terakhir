@@ -13,6 +13,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 53932500,
         "atNeedPrice": 53932500,
+        "imageUrl": "/images/al-azhar-memorial-garden/plots/single.jpg",
         "features": [
           "1.5m x 3.0m",
           "Makam tunggal khusus Muslim",
@@ -29,7 +30,14 @@
     ],
     "kecamatan": "Telukjambe Barat",
     "city": "Karawang",
-    "address": "Jl. Raya Karawang-Bekasi KM 35, Telukjambe Barat, Karawang"
+    "address": "Jl. Raya Karawang-Bekasi KM 35, Telukjambe Barat, Karawang",
+    "thumbnailUrl": "/images/al-azhar-memorial-garden/thumbnail.jpg",
+    "images": [
+      "/images/al-azhar-memorial-garden/gallery-1.jpg",
+      "/images/al-azhar-memorial-garden/gallery-2.jpg",
+      "/images/al-azhar-memorial-garden/gallery-3.jpg",
+      "/images/al-azhar-memorial-garden/gallery-4.jpg"
+    ]
   },
   {
     "id": "san-diego-hills-universal",
@@ -45,6 +53,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 122000000,
         "atNeedPrice": 135000000,
+        "imageUrl": "/images/san-diego-hills-universal/plots/single.jpg",
         "features": [
           "1.1m x 2.6m",
           "Tanpa pembatas/tembok",
@@ -56,6 +65,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 250000000,
         "atNeedPrice": 280000000,
+        "imageUrl": "/images/san-diego-hills-universal/plots/double.jpg",
         "features": [
           "Semi-private area dengan pembatas tanaman",
           "Kapasitas untuk 2 jenazah"
@@ -66,6 +76,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 650000000,
         "atNeedPrice": 720000000,
+        "imageUrl": "/images/san-diego-hills-universal/plots/family.jpg",
         "features": [
           "Private estate dengan pagar tembok/pintu gerbang",
           "Bisa menampung 4-8 jenazah atau lebih"
@@ -81,7 +92,14 @@
     ],
     "kecamatan": "Telukjambe Barat",
     "city": "Karawang",
-    "address": "Exit Tol Karawang Barat KM 46, Karawang"
+    "address": "Exit Tol Karawang Barat KM 46, Karawang",
+    "thumbnailUrl": "/images/san-diego-hills-universal/thumbnail.jpg",
+    "images": [
+      "/images/san-diego-hills-universal/gallery-1.jpg",
+      "/images/san-diego-hills-universal/gallery-2.jpg",
+      "/images/san-diego-hills-universal/gallery-3.jpg",
+      "/images/san-diego-hills-universal/gallery-4.jpg"
+    ]
   },
   {
     "id": "tpu-pondok-ranggon-muslim",
@@ -96,6 +114,7 @@
         "plotType": "Single",
         "booking": "At-Need Only",
         "atNeedPrice": 100000,
+        "imageUrl": "/images/tpu-pondok-ranggon-muslim/plots/single.jpg",
         "features": [
           "1.5m x 2.5m",
           "Muslim section",
@@ -112,7 +131,14 @@
     ],
     "kecamatan": "Cipayung",
     "city": "Jakarta Timur",
-    "address": "Jl. Pondok Ranggon, Cipayung, Jakarta Timur"
+    "address": "Jl. Pondok Ranggon, Cipayung, Jakarta Timur",
+    "thumbnailUrl": "/images/tpu-pondok-ranggon-muslim/thumbnail.jpg",
+    "images": [
+      "/images/tpu-pondok-ranggon-muslim/gallery-1.jpg",
+      "/images/tpu-pondok-ranggon-muslim/gallery-2.jpg",
+      "/images/tpu-pondok-ranggon-muslim/gallery-3.jpg",
+      "/images/tpu-pondok-ranggon-muslim/gallery-4.jpg"
+    ]
   },
   {
     "id": "tpu-tanah-kusir",
@@ -127,6 +153,7 @@
         "plotType": "Single",
         "booking": "At-Need Only",
         "atNeedPrice": 100000,
+        "imageUrl": "/images/tpu-tanah-kusir/plots/single.jpg",
         "features": [
           "1.5m x 2.5m",
           "Christian section",
@@ -143,7 +170,14 @@
     ],
     "kecamatan": "Kebayoran Lama",
     "city": "Jakarta Selatan",
-    "address": "Jl. Tanah Kusir, Kebayoran Lama, Jakarta Selatan"
+    "address": "Jl. Tanah Kusir, Kebayoran Lama, Jakarta Selatan",
+    "thumbnailUrl": "/images/tpu-tanah-kusir/thumbnail.jpg",
+    "images": [
+      "/images/tpu-tanah-kusir/gallery-1.jpg",
+      "/images/tpu-tanah-kusir/gallery-2.jpg",
+      "/images/tpu-tanah-kusir/gallery-3.jpg",
+      "/images/tpu-tanah-kusir/gallery-4.jpg"
+    ]
   },
   {
     "id": "graha-sentosa-memorial",
@@ -159,6 +193,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 40000000,
         "atNeedPrice": 45000000,
+        "imageUrl": "/images/graha-sentosa-memorial/plots/single.jpg",
         "features": [
           "1.5m x 3.0m",
           "Desain makam modern minimalis",
@@ -170,6 +205,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 85000000,
         "atNeedPrice": 95000000,
+        "imageUrl": "/images/graha-sentosa-memorial/plots/double.jpg",
         "features": [
           "Lahan berdampingan untuk pasangan",
           "Pilihan ornamen nisan khusus sesuai keyakinan"
@@ -185,7 +221,14 @@
     ],
     "kecamatan": "Telukjambe Timur",
     "city": "Karawang",
-    "address": "Jl. Trans Heksa, Wanajaya, Telukjambe Timur, Karawang"
+    "address": "Jl. Trans Heksa, Wanajaya, Telukjambe Timur, Karawang",
+    "thumbnailUrl": "/images/graha-sentosa-memorial/thumbnail.jpg",
+    "images": [
+      "/images/graha-sentosa-memorial/gallery-1.jpg",
+      "/images/graha-sentosa-memorial/gallery-2.jpg",
+      "/images/graha-sentosa-memorial/gallery-3.jpg",
+      "/images/graha-sentosa-memorial/gallery-4.jpg"
+    ]
   },
   {
     "id": "tpu-karet-bivak",
@@ -200,6 +243,7 @@
         "plotType": "Single",
         "booking": "At-Need Only",
         "atNeedPrice": 100000,
+        "imageUrl": "/images/tpu-karet-bivak/plots/single.jpg",
         "features": [
           "1.5m x 2.5m",
           "Lokasi pusat kota Jakarta",
@@ -216,7 +260,14 @@
     ],
     "kecamatan": "Tanah Abang",
     "city": "Jakarta Pusat",
-    "address": "Jl. KH. Mas Mansyur, Karet Tengsin, Tanah Abang, Jakarta Pusat"
+    "address": "Jl. KH. Mas Mansyur, Karet Tengsin, Tanah Abang, Jakarta Pusat",
+    "thumbnailUrl": "/images/tpu-karet-bivak/thumbnail.jpg",
+    "images": [
+      "/images/tpu-karet-bivak/gallery-1.jpg",
+      "/images/tpu-karet-bivak/gallery-2.jpg",
+      "/images/tpu-karet-bivak/gallery-3.jpg",
+      "/images/tpu-karet-bivak/gallery-4.jpg"
+    ]
   },
   {
     "id": "tpu-menteng-pulo-buddha",
@@ -231,6 +282,7 @@
         "plotType": "Single",
         "booking": "At-Need Only",
         "atNeedPrice": 100000,
+        "imageUrl": "/images/tpu-menteng-pulo-buddha/plots/single.jpg",
         "features": [
           "1.5m x 2.5m",
           "Area khusus penganut agama Buddha",
@@ -247,7 +299,14 @@
     ],
     "kecamatan": "Tebet",
     "city": "Jakarta Selatan",
-    "address": "Jl. Casablanca, Menteng Dalam, Tebet, Jakarta Selatan"
+    "address": "Jl. Casablanca, Menteng Dalam, Tebet, Jakarta Selatan",
+    "thumbnailUrl": "/images/tpu-menteng-pulo-buddha/thumbnail.jpg",
+    "images": [
+      "/images/tpu-menteng-pulo-buddha/gallery-1.jpg",
+      "/images/tpu-menteng-pulo-buddha/gallery-2.jpg",
+      "/images/tpu-menteng-pulo-buddha/gallery-3.jpg",
+      "/images/tpu-menteng-pulo-buddha/gallery-4.jpg"
+    ]
   },
   {
     "id": "raudlatul-jannah-memorial",
@@ -263,6 +322,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 39100000,
         "atNeedPrice": 43500000,
+        "imageUrl": "/images/raudlatul-jannah-memorial/plots/single.jpg",
         "features": [
           "1.5m x 2.5m",
           "Khusus Muslim sesuai kaidah fikih",
@@ -274,6 +334,7 @@
         "booking": "Pre-Need & At-Need",
         "preNeedPrice": 82000000,
         "atNeedPrice": 91000000,
+        "imageUrl": "/images/raudlatul-jannah-memorial/plots/double.jpg",
         "features": [
           "Lahan semi-private bersebelahan",
           "Nisan rata tanah (flat marker)"
@@ -289,6 +350,13 @@
     ],
     "kecamatan": "Telukjambe Barat",
     "city": "Karawang",
-    "address": "Jl. Kuta Tandingan, Margakaya, Telukjambe Barat, Karawang"
+    "address": "Jl. Kuta Tandingan, Margakaya, Telukjambe Barat, Karawang",
+    "thumbnailUrl": "/images/raudlatul-jannah-memorial/thumbnail.jpg",
+    "images": [
+      "/images/raudlatul-jannah-memorial/gallery-1.jpg",
+      "/images/raudlatul-jannah-memorial/gallery-2.jpg",
+      "/images/raudlatul-jannah-memorial/gallery-3.jpg",
+      "/images/raudlatul-jannah-memorial/gallery-4.jpg"
+    ]
   }
 ]
